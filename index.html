@@ -1,0 +1,245 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            
+        }
+        .content {
+            position: relative;
+            margin: 5px;
+            margin-left: 15%;
+            width: 80%;
+            max-width: 900px;
+            height:200vh;
+            display: grid;
+            grid-template-areas: "prvi prvi prvi prvi" "drugi treci treci treci" "cetvrti cetvrti peti peti" "sesti sesti sesti sesti";
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Updock&display=swap');
+        @keyframes nagib{
+          0%{
+              transform:skewX(0deg);
+          }
+          50%{
+              transform:skewX(30deg);
+          }
+          100%{
+              transform:skewX(0deg);
+          }
+        }
+        a:visited{
+            color:green;
+        }
+        .prvi {
+            grid-area: prvi;
+            font-family:'Updock',cursive;
+            color:green;
+            font-size:2em;
+            border:2px solid black;
+            
+        }
+        .drugi {
+            grid-area: drugi;
+            display: flex;
+            flex-direction: column;
+            
+            
+            justify-items: flex-start;
+            align-items: flex-start;
+            row-gap: 10px;
+            border: 2px solid black;
+        }
+        .cetvrti p{
+            background-color:antiquewhite;
+            color:crimson;
+            font-size:1em;
+        }
+        .treci {
+            grid-area: treci;
+            display: flex;
+            
+            flex-direction: column;
+            justify-content:center;
+            justify-self:center;
+            align-items:stretch;
+            border: 2px solid black;
+            row-gap: 10px;
+            width:100%;
+        }
+        .naglasi {
+            font-weight: bold;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            grid-row-gap:10px;
+            
+            justify-content: center;
+        }
+        .cetvrti {
+            grid-area: cetvrti;
+            border: 2px solid black;
+        }
+        .peti {
+            grid-area: peti;
+            display: flex;
+            flex-direction: row;
+            align-items: stretch;
+            flex-wrap: wrap;
+            grid-gap:25px;
+            
+            border: 2px solid black;
+        }
+        .slika {
+            width:25%;
+            height:20px;
+            align-self:center;
+            justify-self:center;
+            grid-gap:25px;
+            
+        }
+            .slika:hover {
+                animation-name: nagib;
+                animation-duration: 1.5s;
+            }
+        .pom{
+            width:100%;
+            height:100px;
+        }
+        .sesti {
+            grid-area: sesti;
+            position: absolute;
+            bottom: 15px;
+            border: 2px solid black;
+        }
+        .iznimka{
+            background-color:aqua !important;
+            color:black !important;
+        }
+        .sl{
+            
+        }
+        .spremnik{
+            width:500px;
+            
+        }
+        .contentcell1{
+            width:inherit;
+        }
+        @media only screen and (max-device-width: 600px) {
+            
+            div.content {
+                width:100%;
+                display: grid;
+                grid-template-columns:repeat(2,1fr);
+                grid-template-rows:repeat(3,1fr);
+                
+                border: 2px solid black;
+            }
+         .prvi,.treci,.peti
+           {
+               grid-column:1/2;
+               align-self:stretch;
+               justify-self:stretch;
+               
+           }
+         #text{
+             background-color:aqua;
+         }
+            .drugi, .cetvrti, .sesti {
+                grid-column: 2/2;
+                align-self: stretch;
+                justify-self: stretch;
+            }
+            .drugi{
+                grid-row:1/3;
+            }
+            .cetvrti{
+                grid-row:2/3;
+            }
+            .sesti {
+                grid-row: 3/3;
+                position:relative;
+                bottom:auto;
+            }
+            .spremnik {
+                display:flex;
+                align-self:stretch;
+                justify-self:stretch;
+                flex-direction:column;
+            
+        }
+            }
+            
+        
+       
+       
+    </style>
+</head>
+<body>
+    
+    <div class="content">
+        <div class="prvi" id="jedan">
+            <div class="contentcell" id="text2">Programiranje mrežnih aplikacija</div>
+            <div class="contentcell" id="text2">1.kolokvij</div>
+
+
+        </div>
+        <div class="drugi" id="dva">
+            <a href="#jedan">Zaglavlje</a>
+            <a href="#dva">Navigacija</a>
+            <a href="#tri">Osobni podaci</a>
+            <a href="#cetiri">Kratki životopis</a>
+            <a href="#pet">Galerija slika</a>
+            <a href="#sest">Podnožje</a>
+        </div>
+        <div class="treci" id="tri">
+            <div class="contentcell" id="sl1"><img class="sl" src="prva.png" sizes="(max-width: 400px) 50px,400px" alt=""></div>
+            <div class="naglasi">
+                <div class="contentcell22" id="text">3.8.2000.</div>
+                <div class="contentcell22" id="text1">Glavina Donja 26</div>
+                <div class="contentcell22" id="text1">Matematika</div>
+                <div class="contentcell22" id="text1">123456789</div>
+            </div>
+
+
+
+        </div>
+        <div class="cetvrti" id="cetiri">
+            <div class="contentcell21" id="text1"><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vitae arcu non sem finibus bibendum. Etiam sit amet ex eleifend, bibendum felis aliquam, faucibus quam. Proin sodales congue magna, vitae ornare leo molestie vitae. </p></div>
+            <div class="contentcell21" id="text1"><p>Proin fermentum orci et ipsum mollis, non tincidunt libero aliquet. Vestibulum vel urna lorem. Aliquam ut interdum augue. Nulla dictum rutrum odio vitae ultricies. Fusce nulla risus, facilisis quis tempor a, porttitor pharetra mi. </p></div>
+            <div class="contentcell21" id="text1"><p>Donec vel enim hendrerit, pharetra dolor eget, tristique ligula. Donec porttitor, lectus sit amet molestie viverra, mauris nisi pharetra arcu, sit amet cursus tortor tellus a neque. </p></div>
+            <div class="contentcell21" id="text1"><p class="iznimka">
+    Cras et mi iaculis, laoreet arcu quis, aliquam arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Fusce metus nunc, tempus at mollis sed, pretium nec magna.
+</p>
+            </div>
+
+        </div>
+        <div class="peti" id="pet">
+            <div class="slika" id="sl1"><img class="pom" src="s1.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img class="pom" src="s2.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img  class="pom" src="s3.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img class="pom" src="s4.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img class="pom" src="s5.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img class="pom" src="s6.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img class="pom" src="s7.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img class="pom" src="s8.jpg" alt=""></div>
+            <div class="slika" id="sl1"><img  class="pom"src="s9.jpg" alt=""></div>
+
+        </div>
+        <div class="sesti" id="sest">
+            <div class="spremnik">
+                <div class="contentcell2" id="text1">19.4.2022.</div>
+                <div class="contentcell2" id="text1">Split</div>
+                <div class="contentcell2" id="text1">Prirodoslovno-matematički fakultet</div>
+                <div class="contentcell2" id="text1">Ul. Ruđera Boškovića 33, 21000, Split</div>
+
+
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
